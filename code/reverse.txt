@@ -1,0 +1,13 @@
+function reverse (lst:RecDyn):RecDyn;
+var tail, NewHead:RecDyn;
+begin
+<font color=white>____</font>if (lst=nil) or (lst^.next=nil) then
+<font color=white>________</font>reverse:=lst
+<font color=white>____</font>else
+<font color=white>____</font>begin
+<font color=white>________</font>tail:=lst^.next;
+<font color=white>________</font>NewHead:=reverse(tail);
+<font color=white>________</font>lst^.next:=nil;tail^.next:=lst;
+<font color=white>________</font>reverse:=NewHead;
+<font color=white>____</font>end;
+end;

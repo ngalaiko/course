@@ -1,0 +1,21 @@
+procedure sort(first:RecDyn);
+var Reci,Recj: RecDyn;
+c: integer;
+begin
+<font color=white>____</font>Reci:=first;
+<font color=white>____</font>while Reci^.next&lt;&gt;nil do
+<font color=white>____</font>begin
+<font color=white>________</font>Recj:=Reci^.next;
+<font color=white>________</font>while Recj<>nil do
+<font color=white>________</font>begin
+<font color=white>____________</font>if Reci^.info&gt;Recj^.info then
+<font color=white>____________</font>begin
+<font color=white>________________</font>c:=Reci^.info;
+<font color=white>________________</font>Reci^.info:=Recj^.info;
+<font color=white>________________</font>Recj^.info:=c;
+<font color=white>____________</font>end;
+<font color=white>____________</font>Recj:=Recj^.next;
+<font color=white>________</font>end;
+<font color=white>________</font>Reci:=Reci^.next;
+<font color=white>____</font>end;
+end;

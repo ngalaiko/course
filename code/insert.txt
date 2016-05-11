@@ -1,0 +1,24 @@
+procedure vstavka(var first:RecDyn);
+var curr, prev,r100, r1000, max, predmax:RecDyn;
+begin 
+<font color=white>____</font>curr:=first; prev:=first; max:=first; predmax:=first;
+<font color=white>____</font>while (curr&lt;&gt;NIL) do 
+<font color=white>____</font>begin
+<font color=white>________</font>if (curr^.info>max^.info) then 
+<font color=white>____________</font>begin 
+<font color=white>________________</font>max:=curr; predmax:=prev 
+<font color=white>____________</font>end;
+<font color=white>________</font>prev:=curr; curr:=curr^.next;
+<font color=white>____</font>end;  
+<font color=white>____</font>New(r100); New(r1000);
+<font color=white>____</font>r100^.info:=100; r1000^.info:=1000;
+<font color=white>____</font>r1000^.next:=max^.next; max^.next:=r1000;
+<font color=white>____</font>if (max=first) then 
+<font color=white>____</font>begin
+<font color=white>________</font>r100^.next:=first; first:=r100;
+<font color=white>____</font>end 
+<font color=white>____</font>else
+<font color=white>____</font>begin
+<font color=white>________</font>r100^.next:=max;predmax^.next:=r100;
+<font color=white>____</font>end;
+end;

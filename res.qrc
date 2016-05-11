@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/">
+        <file>insert.txt</file>
+        <file>queueAdd.txt</file>
+        <file>remove.txt</file>
+        <file>reverse.txt</file>
+        <file>sortBubble.txt</file>
+        <file>sortSet.txt</file>
+        <file>stackAdd.txt</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,11 @@
+node2 *addstack (node2 *lst, int x)
+{
+<font color=white>____</font>node2 *p = new node2;
+<font color=white>____</font>p->info = x;
+<font color=white>____</font>if(lst != NULL)
+<font color=white>____</font><font color=white>____</font>lst->prev = p; 
+<font color=white>____</font>p->next = lst;
+<font color=white>____</font>p->prev = NULL;
+<font color=white>____</font>lst = p;
+<font color=white>____</font>return lst;
+}

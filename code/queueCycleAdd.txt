@@ -1,0 +1,15 @@
+node *add_elem(node *lst, int x)
+{
+<font color=white>____</font>node *p;
+<font color=white>____</font>p = new node;
+<font color=white>____</font>p->info = x;
+<font color=white>____</font>if (lst == NULL)
+<font color=white>____</font><font color=white>____</font>p->next = p; 
+<font color=white>____</font>else 
+<font color=white>____</font>{
+<font color=white>____</font><font color=white>____</font>p->next = lst->next;
+<font color=white>____</font><font color=white>____</font>lst->next = p;
+<font color=white>____</font>}
+<font color=white>____</font>lst = p; 
+<font color=white>____</font>return lst;
+}

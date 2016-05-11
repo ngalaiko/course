@@ -1,0 +1,23 @@
+procedure deleteodd(var first:RecDyn);
+var curr, pred :RecDyn;
+begin 
+<font color=white>____</font>curr := first; pred := first;
+<font color=white>____</font>while (curr &lt;&gt; NIL) do
+<font color=white>________</font>if odd(curr^.info) then
+<font color=white>____________</font>if (curr = first) then begin
+<font color=white>________________</font>curr := curr^.next;
+<font color=white>________________</font>dispose(first);
+<font color=white>________________</font>first:= curr; 
+<font color=white>________________</font>pred := first;
+<font color=white>____________</font>end 
+<font color=white>________</font>else begin 
+<font color=white>____________</font>pred^.next := curr^.next;
+<font color=white>____________</font>dispose(curr);
+<font color=white>____________</font>curr := pred^.next;
+<font color=white>____________</font>end 
+<font color=white>________</font>else 
+<font color=white>________</font>begin
+<font color=white>____________</font>pred := curr; 
+<font color=white>____________</font>curr := curr^.next;
+<font color=white>________</font>end;
+end;

@@ -1,0 +1,16 @@
+#ifndef CYCLE_H
+#define CYCLE_H
+
+#include "common.h"
+
+class cycle: public Common
+{
+public:
+    cycle() {}
+    cycle(Display *parent);
+    ~cycle() {}
+
+    void Add(int a);
+};
+
+#endif // CYCLE_H

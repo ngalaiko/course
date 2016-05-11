@@ -1,0 +1,19 @@
+<RCC>
+    <qresource prefix="/">
+        <file>code/insert.txt</file>
+        <file>code/queueAdd.txt</file>
+        <file>code/queueCycleAdd.txt</file>
+        <file>code/remove.txt</file>
+        <file>code/reverse.txt</file>
+        <file>code/sortBubble.txt</file>
+        <file>code/sortSet.txt</file>
+        <file>code/stackAdd.txt</file>
+        <file>code/stackDoubleAdd.txt</file>
+    </qresource>
+    <qresource prefix="/pic">
+        <file>png/code.png</file>
+        <file>png/main.png</file>
+        <file>png/scheme.png</file>
+        <file>png/authors.png</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,18 @@
+procedure bubblesort(first:RecDyn);
+var curr,next:RecDyn; flag:boolean;
+c :integer;
+begin
+<font color=white>____</font>repeat 
+<font color=white>________</font>curr:=first; 
+<font color=white>________</font>flag:=true;
+<font color=white>________</font>while curr^.next&lt;&gt;nil do begin
+<font color=white>____________</font>next:=curr^.next;
+<font color=white>____________</font>if curr^.info&lt;next^.info then
+<font color=white>____________</font>begin
+<font color=white>________________</font>c:= curr^.info; curr^.info:=next^.info; next^.info:=c;
+<font color=white>________________</font>flag:=false;
+<font color=white>____________</font>end;
+<font color=white>____________</font>curr:=next;
+<font color=white>________</font>end;
+<font color=white>____</font>until flag;
+end;

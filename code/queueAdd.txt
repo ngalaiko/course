@@ -1,0 +1,23 @@
+procedure queue(var first: RecDyn);
+Var N: integer;
+Last, Curr: RecDyn;
+begin
+<font color=white>____</font>writeln('Input natural number:');
+<font color=white>____</font>read(N);
+<font color=white>____</font>if N &lt;= 0 then
+<font color=white>________</font>First := NIL 
+<font color=white>____</font>else
+<font color=white>____</font>begin
+<font color=white>________</font>New(Curr);
+<font color=white>________</font>First := Curr;
+<font color=white>________</font>repeat
+<font color=white>____________</font>Last := Curr;
+<font color=white>____________</font>New(Curr);
+<font color=white>____________</font>Last^.next := curr;
+<font color=white>____________</font>Last^.Info := N; 
+<font color=white>____________</font>read(N);
+<font color=white>________</font>until N &lt;= 0;
+<font color=white>____</font>Last^.next := NIL;
+<font color=white>____</font>Dispose(Curr);
+<font color=white>____</font>end; 
+end;
