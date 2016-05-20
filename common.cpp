@@ -1,4 +1,4 @@
-#include "common.h"
+﻿#include "common.h"
 
 Common::Common()
 {
@@ -172,7 +172,7 @@ void Common::Insert()
         predmax->next = r100;
     }
 
-    number +=2;
+    number += 2;
 
     emit PaintList();
 
@@ -212,7 +212,7 @@ int Common::Remove(int n)
 
     while(curr)
     {
-        if (curr->info == n /*i == n*/)
+        if (curr->info == n)
         {
             if (curr == first)
             {

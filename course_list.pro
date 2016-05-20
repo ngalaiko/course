@@ -45,3 +45,6 @@ FORMS    += mainwindow.ui \
 
 RESOURCES += \
     code.qrc
+
+DISTFILES += \
+    code/deleteCycle.txt

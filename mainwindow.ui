@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>324</width>
+    <width>365</width>
     <height>261</height>
    </rect>
   </property>
@@ -18,118 +18,129 @@
     <normaloff>:/pic/png/main.png</normaloff>:/pic/png/main.png</iconset>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <layout class="QGridLayout" name="gridLayout">
+   <layout class="QGridLayout" name="gridLayout_3">
     <item row="0" column="0">
-     <layout class="QHBoxLayout" name="horizontalLayout_5">
-      <item>
-       <widget class="QComboBox" name="comboBox">
+     <layout class="QGridLayout" name="gridLayout_2">
+      <property name="sizeConstraint">
+       <enum>QLayout::SetDefaultConstraint</enum>
+      </property>
+      <item row="0" column="0">
+       <layout class="QHBoxLayout" name="horizontalLayout_5">
         <item>
-         <property name="text">
-          <string>Очередь</string>
-         </property>
+         <widget class="QComboBox" name="comboBox">
+          <item>
+           <property name="text">
+            <string>Очередь</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Стек</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Циклическая очередь</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Двунаправленный стек</string>
+           </property>
+          </item>
+         </widget>
         </item>
         <item>
-         <property name="text">
-          <string>Стек</string>
-         </property>
+         <widget class="QPushButton" name="pushButton_reset">
+          <property name="text">
+           <string>Начать</string>
+          </property>
+         </widget>
         </item>
-        <item>
-         <property name="text">
-          <string>Циклическая очередь</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Двунаправленный стек</string>
-         </property>
-        </item>
-       </widget>
+       </layout>
       </item>
-      <item>
-       <widget class="QPushButton" name="pushButton_reset">
-        <property name="text">
-         <string>Начать</string>
-        </property>
-       </widget>
+      <item row="1" column="0">
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="QPushButton" name="pushButton_add">
+          <property name="text">
+           <string>Добавить:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="lineEdit_add">
+          <property name="text">
+           <string>1</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
       </item>
      </layout>
     </item>
     <item row="1" column="0">
-     <layout class="QHBoxLayout" name="horizontalLayout">
-      <item>
-       <widget class="QPushButton" name="pushButton_add">
-        <property name="text">
-         <string>Добавить:</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLineEdit" name="lineEdit_add">
-        <property name="text">
-         <string>1</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </item>
-    <item row="2" column="0">
-     <layout class="QHBoxLayout" name="horizontalLayout_4">
-      <item>
-       <widget class="QPushButton" name="pushButton_Insert">
-        <property name="text">
-         <string>Вставить 100 перед и 1000 после максимального</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </item>
-    <item row="3" column="0">
-     <layout class="QHBoxLayout" name="horizontalLayout_3">
-      <item>
-       <widget class="QPushButton" name="Remove">
-        <property name="text">
-         <string>Удалить все элементы, равные:</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLineEdit" name="lineEdit_remove">
-        <property name="text">
-         <string>1</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </item>
-    <item row="4" column="0">
-     <widget class="QPushButton" name="pushButton_reverse">
-      <property name="text">
-       <string>Реверс списка</string>
-      </property>
-     </widget>
-    </item>
-    <item row="5" column="0">
-     <layout class="QHBoxLayout" name="horizontalLayout_2">
-      <item>
-       <widget class="QPushButton" name="pushButton_SortBubble">
-        <property name="text">
-         <string>Сортировать</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QComboBox" name="comboBox_sort">
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="0" column="0">
+       <layout class="QHBoxLayout" name="horizontalLayout_4">
         <item>
-         <property name="text">
-          <string>Установкой по возрастанию</string>
-         </property>
+         <widget class="QPushButton" name="pushButton_Insert">
+          <property name="text">
+           <string>Вставить 100 перед и 1000 после максимального</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item row="1" column="0">
+       <layout class="QHBoxLayout" name="horizontalLayout_3">
+        <item>
+         <widget class="QPushButton" name="Remove">
+          <property name="text">
+           <string>Удалить все элементы, равные:</string>
+          </property>
+         </widget>
         </item>
         <item>
-         <property name="text">
-          <string>Пузырьком по убыванию</string>
-         </property>
+         <widget class="QLineEdit" name="lineEdit_remove">
+          <property name="text">
+           <string>1</string>
+          </property>
+         </widget>
         </item>
+       </layout>
+      </item>
+      <item row="2" column="0">
+       <widget class="QPushButton" name="pushButton_reverse">
+        <property name="text">
+         <string>Реверс списка</string>
+        </property>
        </widget>
+      </item>
+      <item row="3" column="0">
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <widget class="QPushButton" name="pushButton_SortBubble">
+          <property name="text">
+           <string>Сортировать</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="comboBox_sort">
+          <item>
+           <property name="text">
+            <string>Установкой по возрастанию</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Пузырьком по убыванию</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+       </layout>
       </item>
      </layout>
     </item>
@@ -140,8 +151,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>324</width>
-     <height>26</height>
+     <width>365</width>
+     <height>25</height>
     </rect>
    </property>
    <widget class="QMenu" name="menu">

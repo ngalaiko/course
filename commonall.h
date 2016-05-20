@@ -1,4 +1,4 @@
-#ifndef COMMONALL_H
+﻿#ifndef COMMONALL_H
 #define COMMONALL_H
 
 #include <QObject>
@@ -66,6 +66,7 @@ signals:
     //нарисовать pred (сверху) и curr (снизу)
     void PaintQueuePredCurr(int number, int pred, int curr, QString pred_s, QString curr_s, int predmax = -1, int max = -1);
     void PaintStackPredCurr(int number, int pred, int curr, QString pred_s, QString curr_s, int predmax = -1, int max = -1);
+    void PaintQueueCyclePointerUp(int,QString);
     //удаление
     void PaintRemoveQueueElem(int number);
     void PaintRemoveStackElem(int number);

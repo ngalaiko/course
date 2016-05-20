@@ -1,4 +1,4 @@
-#ifndef CYCLE_H
+﻿#ifndef CYCLE_H
 #define CYCLE_H
 
 #include "common.h"
@@ -11,6 +11,7 @@ public:
     ~QueueCycle() {}
 
     void Add(int a);
+    int Remove(int n);
 };
 
 #endif // CYCLE_H

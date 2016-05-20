@@ -1,4 +1,4 @@
-#include "display.h"
+﻿#include "display.h"
 #include "ui_display.h"
 #include "QMessageBox"
 
@@ -297,6 +297,18 @@ void Display::Paint_CycleQueue_Pointer_up(int x, QString string)
     scene_cycleQueue->addLine(x + width / 4, y , x + width / 4 + 3, y - 5, pen);
     name = scene_cycleQueue->addText(string);
     name->setPos(x + 5, 3);
+}
+
+void Display::PaintQueueCyclePointerUp(int x, QString string) {
+    ui->pushButton_next->setEnabled(true);
+    emit offAll();
+    ui->graphicsView->setScene(scene_queue);
+
+    Paint_CycleQueue_Pointer_up(x, string);
+
+    ui->pushButton_next->setEnabled(false);
+    emit onAll();
+    operation = 0;
 }
 
 void Display::Paint_Queue_Pointer_down(int x, QString string)

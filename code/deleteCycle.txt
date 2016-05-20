@@ -1,0 +1,32 @@
+﻿node * del (node *lst, int x1)
+{
+<font color=white>____</font> node *tek, *pred, *t;
+<font color=white>____</font> tek = lst->next;
+<font color=white>____</font> pred = lst;
+<font color=white>____</font> while (lst && lst->info < x1) {
+<font color=white>____</font><font color=white>____</font>  if (lst->next == lst) {
+<font color=white>____</font><font color=white>____</font><font color=white>____</font><font color=white>____</font>free(lst); lst = NULL;
+<font color=white>____</font><font color=white>____</font>  } else {
+<font color=white>____</font><font color=white>____</font><font color=white>____</font><font color=white>____</font>t = lst;
+<font color=white>____</font><font color=white>____</font><font color=white>____</font><font color=white>____</font>do
+<font color=white>____</font><font color=white>____</font><font color=white>____</font><font color=white>____</font><font color=white>____</font> t = t->next;
+<font color=white>____</font><font color=white>____</font><font color=white>____</font><font color=white>____</font>while (t->next != lst);
+<font color=white>____</font><font color=white>____</font><font color=white>____</font><font color=white>____</font>t->next = pred->next;
+<font color=white>____</font><font color=white>____</font><font color=white>____</font><font color=white>____</font>free(lst);
+<font color=white>____</font><font color=white>____</font><font color=white>____</font><font color=white>____</font>lst = t;
+<font color=white>____</font><font color=white>____</font><font color=white>____</font><font color=white>____</font>pred = t;
+<font color=white>____</font><font color=white>____</font>  }
+<font color=white>____</font> }
+<font color=white>____</font> if (lst != NULL) {
+<font color=white>____</font><font color=white>____</font>  do
+<font color=white>____</font><font color=white>____</font><font color=white>____</font><font color=white>____</font>if (tek->info < x1) {
+<font color=white>____</font><font color=white>____</font><font color=white>____</font><font color=white>____</font><font color=white>____</font> pred->next = tek->next;
+<font color=white>____</font><font color=white>____</font><font color=white>____</font><font color=white>____</font><font color=white>____</font> free(tek);
+<font color=white>____</font><font color=white>____</font><font color=white>____</font><font color=white>____</font><font color=white>____</font> tek = pred->next;
+<font color=white>____</font><font color=white>____</font><font color=white>____</font><font color=white>____</font>} else {
+<font color=white>____</font><font color=white>____</font><font color=white>____</font><font color=white>____</font><font color=white>____</font> pred = tek,tek = tek->next;
+<font color=white>____</font><font color=white>____</font><font color=white>____</font><font color=white>____</font>}
+<font color=white>____</font><font color=white>____</font>while (tek != lst);
+<font color=white>____</font> }
+<font color=white>____</font> return lst;
+}

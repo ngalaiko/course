@@ -1,4 +1,4 @@
-#include "mainwindow.h"
+﻿#include "mainwindow.h"
 #include "ui_mainwindow.h"
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -62,10 +62,10 @@ MainWindow::MainWindow(QWidget *parent) :
     //connect рисования pred и curr
     connect(q, SIGNAL(PaintQueuePredCurr(int,int,int,QString,QString,int,int)), wnd, SLOT(Paint_Queue_pred_curr(int,int,int,QString,QString,int,int)));
     connect(s, SIGNAL(PaintStackPredCurr(int,int,int,QString,QString,int,int)), wnd, SLOT(Paint_Stack_pred_curr(int,int,int,QString,QString,int,int)));
-    //connect реверса
+    connect(qc, SIGNAL(PaintQueueCyclePointerUp(int,QString)), wnd, SLOT(PaintQueueCyclePointerUp(int,QString)));
+    //connect реверс
     connect(q, SIGNAL(PaintReverseQueue(int,int,int,int)), wnd, SLOT(PaintReverseQueue(int,int,int,int)));
     connect(s, SIGNAL(PaintReverseStack(int,int,int,int)), wnd, SLOT(PaintReverseStack(int,int,int,int)));
-
     //маски
     QRegExp exp("[0-9,-]{1,3}");
     ui->lineEdit_add->setValidator(new QRegExpValidator(exp,this));
@@ -75,7 +75,6 @@ MainWindow::MainWindow(QWidget *parent) :
     //выключаем все кнопки, кроме добавления
     Off_Buttons();
     ui->pushButton_add->setEnabled(true);
-
 }
 
 MainWindow::~MainWindow()
@@ -153,6 +152,9 @@ void MainWindow::on_Remove_clicked()
         break;
     case 1:
         a = s;
+        break;
+    case 2:
+        a = qc;
         break;
     }
     //установка label
@@ -234,4 +236,25 @@ void MainWindow::on_action_triggered()
 {
     authors *wnd = new authors(this);
     wnd->show();
+}
+
+void MainWindow::set_one(bool state) {
+    ui->pushButton_Insert->setVisible(state);
+    ui->pushButton_reverse->setVisible(state);
+    ui->pushButton_SortBubble->setVisible(state);
+    ui->comboBox_sort->setVisible(state);
+    ui->Remove->setVisible(state);
+    ui->lineEdit_remove->setVisible(state);
+}
+
+void MainWindow::on_comboBox_currentIndexChanged(int index)
+{
+    switch (index) {
+    case 0:
+    case 1:
+        set_one(true);
+        break;
+    default:
+        set_one(false);
+    }
 }

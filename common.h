@@ -1,4 +1,4 @@
-#ifndef COMMON_H
+﻿#ifndef COMMON_H
 #define COMMON_H
 
 #include "commonall.h"
@@ -15,7 +15,7 @@ public:
     int Top();
     void virtual Add(int a) = 0;
     void Insert();
-    int Remove(int n);
+    int virtual Remove(int n);
     void SortBubble();
     void SortSet();
     void Reverse();

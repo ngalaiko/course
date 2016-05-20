@@ -9,6 +9,7 @@
         <file>code/sortSet.txt</file>
         <file>code/stackAdd.txt</file>
         <file>code/stackDoubleAdd.txt</file>
+        <file>code/deleteCycle.txt</file>
     </qresource>
     <qresource prefix="/pic">
         <file>png/code.png</file>

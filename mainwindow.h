@@ -1,4 +1,4 @@
-#ifndef MAINWINDOW_H
+﻿#ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
 #include <QMainWindow>
@@ -44,6 +44,8 @@ private slots:
 
     void on_action_triggered();
 
+    void on_comboBox_currentIndexChanged(int index);
+
 private:
     Ui::MainWindow *ui;
     Queue *q;
@@ -54,6 +56,8 @@ private:
     CommonAll *a;
     Display *wnd;
     DisplayText *wndtext;
+
+    void set_one(bool state);
 };
 
 #endif // MAINWINDOW_H

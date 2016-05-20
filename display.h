@@ -1,4 +1,4 @@
-#ifndef DISPLAY_H
+﻿#ifndef DISPLAY_H
 #define DISPLAY_H
 
 #include <QDialog>
@@ -118,6 +118,8 @@ public slots:
     //реверс
     void PaintReverseQueue(int number, int first_pos, int first_info, int tail_info);
     void PaintReverseStack(int number, int first_pos, int first_info, int tail_info);
+    //указатели
+    void PaintQueueCyclePointerUp(int x, QString string);
 signals:
     void onAll();
     void offAll();
